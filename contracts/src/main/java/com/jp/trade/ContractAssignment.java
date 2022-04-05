@@ -48,7 +48,7 @@ public class ContractAssignment {
 	/**
 	 * Assign contracts to trades
 	 * 
-	 * @param contractListTest List of contracts to be assigned to trades
+	 * @param contractsMap Map of contracts to be assigned to trades
 	 * @param tradeList        List of trades
 	 */
 	public void assignContracts(ConcurrentHashMap<Integer, Contract> contractsMap, List<Trade> tradeList) {
@@ -68,7 +68,13 @@ public class ContractAssignment {
 		System.out.println("Trades and their assigned contracts " );
 		tradeList.forEach(tra -> System.out.println(tra.toString()));
 	}
-
+	
+	/**
+	 * Assign contracts to trades with orderId
+	 * 
+	 * @param contracts List of contracts to be assigned to trades
+	 * @param tradeList        List of trades
+	 */
 	public void assignContractsWithOrderId(List<Contract> contracts, List<Trade> trades) {
 
 		if (null != trades && trades.size() > 0) {
